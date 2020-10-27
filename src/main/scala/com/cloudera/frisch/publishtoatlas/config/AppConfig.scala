@@ -1,4 +1,4 @@
-package com.cloudera.frisch.scalaappcdp.config
+package com.cloudera.frisch.publishtoatlas.config
 
 import com.typesafe.config.ConfigFactory
 

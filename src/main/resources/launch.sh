@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export DIR="/home/root/scalaappcdpmaven"
+export DIR="/home/root/publish_to_atlas"
 
 echo "*** Starting to launch program ***"
 
@@ -8,7 +8,7 @@ echo "*** Starting to launch program ***"
 
 echo "Launching jar via java command"
 
-    java -jar scalaappcdpmaven.jar $@
+    java -jar publish-to-atlas.jar $@
 
     sleep 1
 

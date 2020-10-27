@@ -1,6 +1,7 @@
-= Scala app CDP with Maven
+= Publish to Atlas
 
-Goal of this project is to ...
+Goal of this project is to publish to Kafka Atlas topic, JSON formatted data to be ingested by Atlas.
+This is just a PoC and example on how to make it easily.
 
 
 == How to run it ?
@@ -13,21 +14,13 @@ Then Package the program:
 Then you can run it using this java command:
 
 [source,bash]
-java -jar java-app-cdp.jar
+java -jar publish-to-atlas-kafka-*-jar*.jar
 
 
-It is also possible to launch it on a platform using script: link:src/main/resources/launchToPlatform.sh[src/main/resources/launchToPlatform.sh].
+It is also possible to launch it on a platform using script: link:src/main/resources/launchToPlatform.sh[launchToPlatform.sh].
 (Adapt it to your needs by changing user & machine of the platform) +
 
 
-To run it on YARN, check project link:https://github.infra.cloudera.com/frisch/yarnsubmit[yarn-submit] .
+== Where to make changes
 
-
-== Where to code ?
-
-1. In Main File and everywhere you want
-
-
-== To Debug
-
-[source,bash]
+Make changes in link:src/main/scala/com/cloudera/frisch/publishtoatlas/MapperToAtlasEntity[MapperToAtlasEntity]
