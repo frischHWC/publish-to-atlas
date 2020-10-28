@@ -9,12 +9,10 @@ object KafkaConfig extends AppConfig {
 
   val brokers = kafkaConf.getString("brokers")
   val acks = kafkaConf.getString("acks")
-
   val protocol = kafkaConfSecurity.getString("protocol")
 
   val mechanism = kafkaConfKerberos.getString("mechanism")
   val serviceName = kafkaConfKerberos.getString("service-name")
-  val activated = kafkaConfKerberos.getString("activated")
   val loginModule = kafkaConfKerberos.getString("login-module")
   val loginModuleName = kafkaConfKerberos.getString("login-module-name")
   val storeKey = kafkaConfKerberos.getString("store-key")

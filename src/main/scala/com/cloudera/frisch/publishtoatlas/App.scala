@@ -20,6 +20,8 @@ object App extends Logging {
     val objectsToPushInAtlas = List("fakeobject")
 
     MapperToAtlasEntity.createAtlasEntity(objectsToPushInAtlas)
+    MapperToAtlasEntity.deleteAtlasEntity(objectsToPushInAtlas)
+    MapperToAtlasEntity.updateAtlasEntity(objectsToPushInAtlas)
 
     logger.info("Finished Program")
   }
