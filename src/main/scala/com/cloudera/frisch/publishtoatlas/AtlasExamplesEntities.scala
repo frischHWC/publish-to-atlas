@@ -146,6 +146,7 @@ object AtlasExamplesEntities extends AtlasHook with Logging {
     entitiesToCreate.addEntity(sparkProcessEntity)
     entitiesToCreate.addEntity(sparkAppEntity)
 
+
     val createRequest = new EntityCreateRequestV2(StandardConfig.kerberosUser, entitiesToCreate): HookNotification
     notifyEntities(Seq(createRequest).asJava, UserGroupInformation.getCurrentUser)
 

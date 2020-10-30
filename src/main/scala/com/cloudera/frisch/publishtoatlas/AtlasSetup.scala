@@ -2,6 +2,7 @@ package com.cloudera.frisch.publishtoatlas
 
 import com.cloudera.frisch.publishtoatlas.config.{AtlasConfig, KafkaConfig, StandardConfig, ZookeeperConfig}
 import org.apache.atlas.ApplicationProperties
+import org.apache.atlas.hook.AtlasHook
 import org.apache.logging.log4j.scala.Logging
 
 object AtlasSetup extends Logging {
@@ -21,6 +22,7 @@ object AtlasSetup extends Logging {
     atlasConf.setProperty("atlas.kafka.acks", KafkaConfig.acks )
     atlasConf.setProperty("atlas.kafka.security.protocol", KafkaConfig.protocol)
     atlasConf.setProperty("atlas.kafka.client.id", StandardConfig.appName)
+    atlasConf.setProperty(AtlasHook.ATLAS_NOTIFICATION_ASYNCHRONOUS, false)
 
 
     if(KafkaConfig.protocol.contains("SASL")) {
