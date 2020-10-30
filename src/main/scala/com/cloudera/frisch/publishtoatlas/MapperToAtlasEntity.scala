@@ -16,6 +16,7 @@ import scala.collection.JavaConverters._
 
 object MapperToAtlasEntity extends AtlasHook with Logging {
 
+
   /**
     * A function that convert objects passed into Atlas entities and then published it into
     * Kafka Atlas topic defined in properties to create these entities
@@ -44,14 +45,15 @@ object MapperToAtlasEntity extends AtlasHook with Logging {
     // Below is a working example
     atlasEntityTest.setTypeName("spark_application")
     val attributes:  java.util.Map[String,AnyRef] = new java.util.HashMap[String,AnyRef]()
-    attributes.put("qualifiedName", "spark_job_fake")
-    attributes.put("name", "Spark Job from Program")
+    attributes.put("qualifiedName", "spark_job_fake_4")
+    attributes.put("name", "Spark Job from Program 4")
     atlasEntityTest.setAttributes(attributes)
 
 
     atlasEntityTest
 
   }
+
 
   /**
     * A function that convert objects passed into Atlas objects IDs and then published it into

@@ -16,12 +16,10 @@ object App extends Logging {
 
     AtlasSetup.setupAtlasConf()
 
-    // TODO: Get objects to push into Atlas as any form
-    val objectsToPushInAtlas = List("fakeobject")
-
-    MapperToAtlasEntity.createAtlasEntity(objectsToPushInAtlas)
-    MapperToAtlasEntity.deleteAtlasEntity(objectsToPushInAtlas)
-    MapperToAtlasEntity.updateAtlasEntity(objectsToPushInAtlas)
+    //for(i <- Range(1,1000000)) {
+    for(i <- Range(1,3)) {
+     AtlasExamplesEntities.createAtlasEntityWithInt(i)
+    }
 
     logger.info("Finished Program")
   }

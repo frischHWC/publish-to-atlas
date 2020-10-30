@@ -13,7 +13,6 @@ ssh ${USER}@${HOST} "mkdir -p ${DEST_DIR}/resources/"
 
 scp src/main/resources/log4j2.properties ${USER}@${HOST}:${DEST_DIR}/
 scp src/main/resources/application.conf ${USER}@${HOST}:${DEST_DIR}/
-scp src/main/resources/kafka-jaas.config ${USER}@${HOST}:${DEST_DIR}/
 scp src/main/resources/launch.sh ${USER}@${HOST}:${DEST_DIR}/
 
 ssh ${USER}@${HOST} "chmod +x ${DEST_DIR}/launch.sh"
