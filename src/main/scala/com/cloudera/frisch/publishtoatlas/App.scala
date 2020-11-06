@@ -15,8 +15,8 @@ object App extends Logging {
     logger.info("Starting Program : " + StandardConfig.appName)
 
     AtlasSetup.setupAtlasConf()
-    
-    for(i <- Range(1,100000)) {
+
+    for(i <- Range(1,2)) {
      AtlasExamplesEntities.createAtlasEntityWithInt(i)
     }
 
